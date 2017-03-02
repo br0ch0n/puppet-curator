@@ -88,11 +88,12 @@ define curator::cron(
     $host
   )
   validate_bool($master_only)
-  validate_re($subcommand, '^indices|snapshots$')
   validate_re($log_format, '^default|logstash$')
   validate_re($log_level, '^INFO|WARN|DEBUG|ERROR$')
 
-
+  if $subcommand != undef {
+    validate_re($subcommand, '^indices|snapshots$')
+  }
   # Build flags string
   $master_only_flags = $master_only ? {
     true    => '--master-only',
