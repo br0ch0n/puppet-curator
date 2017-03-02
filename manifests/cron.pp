@@ -62,7 +62,7 @@
 
 define curator::cron(
   $command     = undef,
-  $subcommand  = 'indices',
+  $subcommand  = undef,
   $parameters  = undef,
   $cron_minute = '0',
   $cron_hour   = '0',
