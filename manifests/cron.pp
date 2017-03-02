@@ -72,7 +72,7 @@ define curator::cron(
 
   # Flags. See : https://www.elastic.co/guide/en/elasticsearch/client/curator/current/flags.html
   $master_only = true,
-  $log_file     = '/var/logs/curator.log',
+  $log_file     = '/var/log/curator.log',
   $log_level    = 'INFO',
   $log_format   = 'default',
   $host         = 'localhost'
